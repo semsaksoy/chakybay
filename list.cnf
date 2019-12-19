@@ -1,0 +1,13 @@
+//password must be in base64 encoding
+
+[
+  {
+    "ip": "10.222.22.22",
+    "user": "user",
+    "pass": "aA==",
+    "client": "POS",
+    "vdom": "root"
+    //    "receiver": "semsaksoy@gmail.com",
+    //"dir": "/Users/semseddin/export/v2"
+  }
+]
