@@ -4,7 +4,7 @@ gemfile do
   gem "parallel"
   gem "net-ssh"
   gem "axlsx"
-  gem "mail"
+  gem "mailfactory"
   gem "ruby-progressbar"
 end
 
@@ -15,6 +15,7 @@ require "axlsx"
 require "json"
 require "date"
 require "ruby-progressbar"
+
 require "mailfactory"
 require "parallel"
 
@@ -27,9 +28,7 @@ require "parallel"
 @gsni = Net::SSH::Proxy::SOCKS5.new('158.98',1080, :user => 'TRZZ', :password => '')
 ##config
 
-Mail.defaults do
-  delivery_method :smtp, address: @mail_server, port: @mail_port
-end
+
 
 require_relative("device")
 

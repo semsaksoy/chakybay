@@ -35,10 +35,10 @@ Parallel.each(conf_list, in_threads: @concurency, progress: {title: "Exporting",
           sheet.add_row l.values
         end
         sheet["A1:N1"].each { |c| c.b = true; c.sz = 13 }
-        sheet.auto_filter = "A1:N1"
+        sheet.auto_filter = "A1:Q1"
         if ls.count > 0
           sheet["C2:C#{ls.count + 1}"].each { |c| c.b = true; c.color = "8B0000"; (c.color = "008000") if c.value == "accept" }
-          sheet["L2:L#{ls.count + 1}"].each_with_index { |c, i| sheet["A#{i + 2}:N#{i + 2}"].each { |z| z.color = "808080" } if c.value == "disable" }
+          sheet["O2:O#{ls.count + 1}"].each_with_index { |c, i| sheet["A#{i + 2}:N#{i + 2}"].each { |z| z.color = "808080" } if c.value == "disable" }
         end
 
       end
