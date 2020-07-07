@@ -19,16 +19,19 @@ class Device
       dintf=grep(p_info, /set\sdstintf\s(.*?)$/)
       saddr=grep(p_info, /set\ssrcaddr\s(.*?)$/)
       daddr=grep(p_info, /set\sdstaddr\s(.*?)$/)
+      users=grep(p_info, /set\susers\s(.*?)$/)
       groups=grep(p_info, /set\sgroups\s(.*?)$/)
       service=grep(p_info, /set\sservice\s(.*?)$/)
       nat=grep(p_info, /set\snat\s(.*?)$/)
+      ips_profile=grep(p_info, /set\sips-sensor\s(.*?)$/)
+      ssl_profile=grep(p_info, /set\sssl-ssh-profile\s(.*?)$/)
       action=grep(p_info, /set\saction\s(.*?)\"?$/)||"deny"
       comments=grep(p_info, /set\scomments\s(.*?)$/)
       status=grep(p_info, /set\sstatus\s(.*?)$/)||"enable"
       pkt=grep(s_info, /pkts\/bytes\=(.*?)\s/)
       cnt=grep(s_info, /hit\scount\:(.*?)\s/)||0
       t<<{order: i+1, rule: rule, action: action, sintf: sintf, dintf: dintf, saddr: saddr, daddr: daddr,
-          groups: groups, service: service, nat: nat, comments: comments, status: status, pkt: pkt, cnt: cnt, }
+          users:users,groups: groups, service: service, nat: nat,ips_profile:ips_profile,ssl_profile:ssl_profile, comments: comments, status: status, pkt: pkt, cnt: cnt, }
     end
     rules= t
   end

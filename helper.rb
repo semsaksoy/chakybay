@@ -15,7 +15,7 @@ require "axlsx"
 require "json"
 require "date"
 require "ruby-progressbar"
-require "mail"
+require "mailfactory"
 require "parallel"
 
 
@@ -24,7 +24,6 @@ require "parallel"
 @mail_server="localhost"
 @mail_port=25
 @mail_from="fortireport@domain.com"
-@mail_subject="forti report"
 @gsni = Net::SSH::Proxy::SOCKS5.new('158.98.136.75',1080, :user => 'TRZZ', :password => '')
 ##config
 
