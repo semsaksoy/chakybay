@@ -24,7 +24,7 @@ require "parallel"
 @mail_server="localhost"
 @mail_port=25
 @mail_from="fortireport@domain.com"
-@gsni = Net::SSH::Proxy::SOCKS5.new('158.98.136.75',1080, :user => 'TRZZ', :password => '')
+@gsni = Net::SSH::Proxy::SOCKS5.new('158.98',1080, :user => 'TRZZ', :password => '')
 ##config
 
 Mail.defaults do
