@@ -127,7 +127,7 @@ Parallel.each(conf_list, in_threads: @concurency, progress: {title: "Exporting",
 
 
       begin
-        Net::SMTP.start(@mail_server, @mail_port, "ata.com.tr", nil, nil, :plain) do |smtp|
+        Net::SMTP.start(@mail_server, @mail_port, "mail.example.org", nil, nil, :plain) do |smtp|
           smtp.send_message mail.to_s, @mail_from, c["receiver"].strip
         end
       rescue Exception => e
