@@ -1,0 +1,13 @@
+//password must be in base64 encoding
+[
+  {
+    "ip": "10.17.1.1",
+    "user": "username",
+    "pass": "cGFzc3dvcmQ=",
+    "client": "ClientNAme",
+    "gsni": false,
+    "vdom": "vdom_name"
+    //    "receiver": "semsaksoy@gmail.com",
+    //"dir": "/Users/semseddin/export/v2"
+  }
+]
